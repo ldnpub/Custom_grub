@@ -17,7 +17,6 @@ sda
 ├─sda5 ext4                /
 ├─sda6 ext4                /home
 └─sda7 vfat                /media/data
-loop0  squashfs                                            /snap/ubuntu-core/109
 
 From that you can edit your:
 
