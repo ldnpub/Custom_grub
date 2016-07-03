@@ -8,17 +8,16 @@ I have 2 systems on my drive. A Windows 10 and Ubuntu 16.04 installed. And i als
 This is my drives configuration:
 
 └─ $ ▶lsblk -f
-NAME   FSTYPE   LABEL UUID                                 MOUNTPOINT
+NAME   FSTYPE   LABEL      MOUNTPOINT
 sda                                                        
-├─sda1 ntfs     win   08E4BA7A351E428A                     
-├─sda2 ntfs           24747B9F747B7282                     
+├─sda1 ntfs     win                        
+├─sda2 ntfs                                
 ├─sda3                                                     
-├─sda4 swap           a5f84c1f-0e0f-47ca-acb7-000467d1c02f 
-├─sda5 ext4           bfa01813-c58d-4368-808e-c1a0a3f57078 /
-├─sda6 ext4           eb37d2a1-4c71-4124-923d-fe00db52990b /home
-└─sda7 vfat           5462-641B                            /media/data
+├─sda4 swap            
+├─sda5 ext4                /
+├─sda6 ext4                /home
+└─sda7 vfat                /media/data
 loop0  squashfs                                            /snap/ubuntu-core/109
-loop1  squashfs                                            /snap/htop/5
 
 From that you can edit your:
 
