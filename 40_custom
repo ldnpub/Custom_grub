@@ -1,0 +1,35 @@
+#!/bin/sh
+exec tail -n +3 $0
+# This file provides an easy way to add custom menu entries.  Simply type the
+# menu entries you want to add after this comment.  Be careful not to change
+# the 'exec tail' line above.
+menuentry "Tails" {
+    insmod ntfs
+    insmod iso9660
+
+      set isofile="/ldnpub/Documents/ISO/tails-i386-2.2.iso"
+      loopback loop (hd0,6)$isofile
+      linux (loop)/live/vmlinuz2 boot=live config noprompt nopersistent timezone=Etc/UTC block.events_dfl_poll_msecs=1000 splash noautologin module=Tails findiso=$isofile quiet 
+      initrd (loop)/live/initrd2.img
+    }
+
+menuentry "Kali" {
+    insmod ntfs
+    insmod iso9660
+
+      set isofile="/ldnpub/Documents/ISO/kali-linux-2.0-amd64.iso"
+      loopback loop (hd0,6)$isofile
+      linux (loop)/live/vmlinuz boot=live noconfig=sudo username=root hostname=kali findiso=$isofile
+      initrd (loop)/live/initrd.img
+    }
+
+menuentry "Voyager" {
+    insmod ntfs
+    insmod iso9660
+
+	set isofile="/ldnpub/Documents/ISO/Voyager-X2-14.04.05-amd64.iso"
+	loopback loop (hd0,6)$isofile
+	linux (loop)/casper/vmlinuz.efi boot=casper iso-scan/filename=${isofile} quiet splash
+	initrd (loop)/casper/initrd.lz
+	}
+
