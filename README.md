@@ -1,7 +1,7 @@
 # Custom_grub
 Config file for booting ISO's directly from the hard drive.
 
-This is a custom grub configuration that allows me to boot directly from ISO's on my hard drive on "Live CD mode". I give this on GitHub since i couldn't find the specifics for TAILS os.
+This is a custom grub configuration that allows me to boot directly from ISO's on my hard drive on "Live CD mode". I give this on GitHub since i couldn't find the specifics for TAILS os anywhere else.
 
 I have 2 systems on my drive. A Windows 10 and Ubuntu 16.04 installed. And i also have 3 ISO's on a specific folder that i need to specify on the grub config file to boot on them.
 
